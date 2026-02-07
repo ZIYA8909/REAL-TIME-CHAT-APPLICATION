@@ -23,3 +23,5 @@ The application’s modular architecture is designed for scalability and maintai
 
 #output
 
+<img width="1918" height="1092" alt="Image" src="https://github.com/user-attachments/assets/fb3b045a-ee61-45bd-9e8a-ca7171889cf2" />
+<img width="1912" height="1087" alt="Image" src="https://github.com/user-attachments/assets/58c89cc4-5c1e-4106-8f61-c1499642b978" />
