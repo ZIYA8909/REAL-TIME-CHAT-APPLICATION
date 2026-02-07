@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1e1f22" />
+    <meta
+      name="description"
+      content="Real-time premium chat application built with React and Socket.io"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Messenger Pro | Real-Time</title>
+
+    <style>
+      /* Prevents the 'White Flash' on load before React kicks in */
+      body {
+        margin: 0;
+        background-color: #1e1f22; 
+        overflow: hidden;
+      }
+      
+      /* Simple loading spinner placeholder */
+      .loading-screen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #5865f2;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+    <div id="root">
+      <div class="loading-screen">
+        <p>Connecting to Server...</p>
+      </div>
+    </div>
+  </body>
+</html>

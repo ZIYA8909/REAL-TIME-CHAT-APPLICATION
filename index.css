@@ -1,0 +1,91 @@
+:root {
+  --accent-blue: #3B82F6;
+  --text-main: #E2E8F0;
+  --text-muted: #94A3B8;
+  
+  /* Distinct Backgrounds */
+  --login-block-bg: #000000;          /* Solid Black for Login Card */
+  --chat-window-bg: rgba(10, 26, 47, 0.9); /* Deep Navy for Chat Window */
+  --input-bg: #121212;
+}
+
+body, html {
+  margin: 0; padding: 0;
+  width: 100%; height: 100%;
+  display: flex; justify-content: center; align-items: center;
+  background-color: #000;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+.app-container {
+  width: 100vw; height: 100vh;
+  display: flex; justify-content: center; align-items: center;
+  position: relative;
+}
+
+/* Background Image Layer */
+.animated-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 1; 
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+}
+
+/* Messenger Pro Login Block */
+.join-card {
+  position: relative;
+  z-index: 10;
+  background: var(--login-block-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem; border-radius: 28px;
+  width: 360px; text-align: center;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 1);
+  display: flex; flex-direction: column; gap: 1.2rem;
+}
+
+/* Chat Window */
+.chat-window {
+  position: relative;
+  z-index: 10;
+  width: 480px; height: 85vh;
+  background: var(--chat-window-bg);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: 24px; overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex; flex-direction: column;
+}
+
+.elegant-title { color: white; letter-spacing: 2px; font-weight: 400; margin: 0; text-transform: uppercase; }
+.icon-circle { background: linear-gradient(135deg, #1E3A8A, var(--accent-blue)); width: 60px; height: 60px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto; }
+
+/* Form Controls */
+.input-group { position: relative; width: 100%; text-align: left; }
+.input-label { color: var(--text-muted); font-size: 0.7rem; margin-bottom: 6px; display: block; text-transform: uppercase; font-weight: bold; }
+.input-icon { position: absolute; left: 14px; top: 35px; color: var(--accent-blue); z-index: 2; }
+.input-group input { width: 100%; padding: 14px 14px 14px 44px; box-sizing: border-box; background: var(--input-bg); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 12px; color: white; outline: none; }
+.join-btn { width: 100%; padding: 16px; background: var(--accent-blue); border: none; border-radius: 12px; color: white; font-weight: 700; cursor: pointer; letter-spacing: 1.5px; transition: 0.3s; }
+
+/* Chat Components */
+.chat-header { padding: 18px 24px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: center; }
+.leave-btn { background: none; border: none; color: var(--text-muted); cursor: pointer; }
+.chat-body { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; }
+.message-wrapper { display: flex; flex-direction: column; }
+.msg-bubble { padding: 12px 16px; border-radius: 18px; max-width: 80%; color: white; }
+.you { align-self: flex-end; }
+.you .msg-bubble { background: var(--accent-blue); }
+.other { align-self: flex-start; }
+.other .msg-bubble { background: rgba(255, 255, 255, 0.08); }
+.msg-author { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
+
+/* Footer & Icons */
+.chat-footer { padding: 15px 20px; display: flex; gap: 15px; background: rgba(0, 0, 0, 0.5); align-items: center; }
+.image-upload-btn { cursor: pointer; display: flex; align-items: center; transition: 0.2s; }
+.image-upload-btn:hover { transform: scale(1.1); }
+.chat-footer input { flex: 1; background: var(--input-bg); border: 1px solid rgba(255, 255, 255, 0.2); padding: 12px; border-radius: 12px; color: white; outline: none; }
+.send-btn { background: var(--accent-blue); border: none; padding: 10px; border-radius: 12px; color: white; cursor: pointer; }
+.sent-image { max-width: 100%; border-radius: 8px; margin-bottom: 5px; }
